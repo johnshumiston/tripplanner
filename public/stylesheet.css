@@ -1,4 +1,8 @@
 
+body {
+	background-image: url('picture.jpeg');
+	background-size: 25%;
+}
 
 
 #map-canvas {
