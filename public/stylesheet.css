@@ -1,0 +1,8 @@
+.row h3{
+	padding-top: 30px;
+}
+
+#map-canvas {
+	margin-top: 70px;
+	height: 50vh;
+}

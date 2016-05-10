@@ -1,0 +1,69 @@
+<DOCTYPE html>
+
+  <head>
+    <title>Trip Planner</title>
+<!--     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> -->
+      <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  </head>
+   <html lang="en">
+
+   <body>
+      <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/wiki">tripstack</a>
+        </div>
+        <div id="nav-items" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/wiki/">index</a></li>
+            <li><a href="/wiki/add">write</a></li>
+            <li><a href="/users">users</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container content">
+      {% block content %}{% endblock %}
+    </div>
+    <hr/>
+
+    <select>
+   {%for hotel in hotels %}
+   <option value="{{hotels.name}}">{{hotel.name}}</option>
+   {% endfor %}
+   </select>
+
+   <select>
+   {%for restaurant in restaurants %}
+   <option value="{{restaurants.name}}">{{restaurant.name}}</option>
+   {% endfor %}
+   </select>
+
+   <select>
+   {%for activity in activities %}
+   <option value="{{activities.name}}">{{activity.name}}</option>
+   {% endfor %}
+   </select>
+
+
+    <div id="footer" class="container text-muted">
+      TRIPSTACK by Fullstack Academy ft Jenna, Alfonso, + John
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+
+       
+
+
+
+
+
+
+
+
+
+
+       
+   </body>
+
+   </html>
