@@ -1,8 +1,17 @@
-.row h3{
-	padding-top: 30px;
-}
+
+
 
 #map-canvas {
 	margin-top: 70px;
 	height: 50vh;
+	width: 100%;
+}
+
+.panel {
+	margin-top: 70px;
+	margin-right: 30px;
+}
+
+.panel h3 {
+	padding-top: 0;
 }

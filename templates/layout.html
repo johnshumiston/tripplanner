@@ -1,102 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>TripPlanner</title>
-
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <script src='/jquery/dist/jquery.min.js'></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARDjTGweaYG4Kzf3Y2S-9sLxmrtwOc43o&sensor=true"></script>
     <link href="/stylesheet.css" rel="stylesheet">
     <script src='/map.js'></script>
+</head>
 
-  </head>
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">TripPlanner</a>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">TripPlanner</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
     </nav>
-    
-    <!-- {% block body %} -->
-    <div class="section lead">
-      <div class="container">
-        <div class="row">
-          <div id="map-canvas" class="map">
-          </div>
-        </div><!-- row -->
-      </div><!-- container -->
-    </div><!-- section -->
-
-    <div class="section clearfix">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <h3><i class="icon-ok-circle"></i> Selections</h3>
-             <select>
-             {%for hotel in hotels %}
-             <option value="{{hotels.name}}">{{hotel.name}}</option>
-             {% endfor %}
-             </select>
-
-             <select>
-             {%for restaurant in restaurants %}
-             <option value="{{restaurants.name}}">{{restaurant.name}}</option>
-             {% endfor %}
-             </select>
-
-             <select>
-             {%for activity in activities %}
-             <option value="{{activities.name}}">{{activity.name}}</option>
-             {% endfor %}
-             </select>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <h3><i class="icon-pencil"></i>Day 1</h3>
-            <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap customizer</a>!</p>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <h3><i class="icon-folder-open-alt"></i> Many Page Options</h3>
-            <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>
-          </div>
-        </div><!-- /.row -->
-
-      </div><!-- /.container -->
-
-    </div><!-- /.section -->
-
-
-    <div class="container">
-
-      <hr>
-
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; Company 2013</p>
-          </div>
+    <div class = "row">
+      <div class = "col-lg-7">
+        <div id="map-canvas" class="map">
         </div>
-      </footer>
+      </div>
+      <div class = "col-lg-5 clearfix">
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h3>Selections</h3></div>
+              <div class="panel-body">
+                      <h4>Hotels</h4>
+                      <select>
+                          {%for hotel in hotels %}
+                          <option value="{{hotels.name}}">{{hotel.name}}</option>
+                          {% endfor %}
+                      </select>
+                      <h4>Restaurants</h4>
+                      <select>
+                          {%for restaurant in restaurants %}
+                          <option value="{{restaurants.name}}">{{restaurant.name}}</option>
+                          {% endfor %}
+                      </select>
+                      <h4>Activities</h4>
+                      <select>
+                          {%for activity in activities %}
+                          <option value="{{activities.name}}">{{activity.name}}</option>
+                          {% endfor %}
+                      </select>
+              </div>
+          </div>
+      </div>
+    </div>
+</body>
 
-    </div><!-- /.container -->
 
-  </body>
+
+
 </html>
